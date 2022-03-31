@@ -56,6 +56,6 @@ class ClangTidy < Formula
 
   test do
     ENV.prepend_path "PATH", bin
-    assert_match "14", shell_output("clang-tidy --version")
+    assert_match /14/, shell_output("clang-tidy --version")
   end
 end
