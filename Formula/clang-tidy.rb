@@ -5,21 +5,8 @@ class ClangTidy < Formula
   license "Apache-2.0"
   version_scheme 1
   head "https://github.com/llvm/llvm-project.git", branch: "main"
-
-  stable do
-    url "https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.0/llvm-14.0.0.src.tar.xz"
-    sha256 "4df7ed50b8b7017b90dc22202f6b59e9006a29a9568238c6af28df9c049c7b9b"
-
-    resource "clang" do
-      url "https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.0/clang-14.0.0.src.tar.xz"
-      sha256 "f5d7ffb86ed57f97d7c471d542c4e5685db4b75fb817c4c3f027bfa49e561b9b"
-    end
-
-    resource "clang-tools-extra" do
-      url "https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.0/clang-tools-extra-14.0.0.src.tar.xz"
-      sha256 "f49de4b4502a6608425338e2d93bbe4529cac0a22f2dc1c119ef175a4e1b5bf0"
-    end
-  end
+  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.0/llvm-project-14.0.0.src.tar.xz"
+  sha256 "35ce9edbc8f774fe07c8f4acdf89ec8ac695c8016c165dd86b8d10e7cba07e23"
 
   livecheck do
     url :stable
@@ -35,16 +22,6 @@ class ClangTidy < Formula
   uses_from_macos "zlib"
 
   def install
-    unless build.head?
-      resource("clang").stage do |r|
-        (buildpath/"clang").install Pathname("clang-#{r.version}.src").children
-      end
-      resource("clang-tools-extra").stage do |r|
-        (buildpath/"clang-tools-extra").install Pathname("clang-tools-extra-#{r.version}.src").children
-      end
-      (buildpath/"llvm").install Pathname("llvm-#{version}.src").children
-    end
-
     system "cmake", "-S", buildpath/"llvm", "-B", "build",
                     "-DLLVM_ENABLE_PROJECTS=clang;clang-tools-extra",
                     "-DLLVM_INCLUDE_BENCHMARKS=OFF",
