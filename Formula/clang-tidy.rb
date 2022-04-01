@@ -1,12 +1,12 @@
 class ClangTidy < Formula
   desc "Linting tools for C, C++ and Obj-C"
   homepage "https://clang.llvm.org/extra/clang-tidy/"
-  # The LLVM Project is under the Apache License v2.0 with LLVM Exceptions
-  license "Apache-2.0"
-  version_scheme 1
-  head "https://github.com/llvm/llvm-project.git", branch: "main"
   url "https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.0/llvm-project-14.0.0.src.tar.xz"
   sha256 "35ce9edbc8f774fe07c8f4acdf89ec8ac695c8016c165dd86b8d10e7cba07e23"
+  # The LLVM Project is under the Apache License v2.0 with LLVM Exceptions
+  license "Apache-2.0" => { with: "LLVM-exception" }
+  version_scheme 1
+  head "https://github.com/llvm/llvm-project.git", branch: "main"
 
   livecheck do
     url :stable
