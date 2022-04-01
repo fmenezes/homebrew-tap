@@ -14,6 +14,12 @@ class ClangTidy < Formula
     regex(%r{href=.*?/tag/llvmorg[._-]v?(\d+(?:\.\d+)+)}i)
   end
 
+  bottle do
+    root_url "https://github.com/fmenezes/homebrew-tap/releases/download/clang-tidy-14.0.0"
+    sha256 cellar: :any_skip_relocation, big_sur:      "3289b3b396c30d1fa61aee141e667596ffd93cabaae8d394f23c43046366d33c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "d580aecb3245079a9e497bbee99eaced2225346aefc248a5dfbbde4e28b86abc"
+  end
+
   depends_on "cmake" => :build
 
   uses_from_macos "libxml2"
