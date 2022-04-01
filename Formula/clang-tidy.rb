@@ -42,7 +42,8 @@ class ClangTidy < Formula
     (testpath/"test.c").write <<~EOS
       int         main(int argc, char **args) { \n   \t printf("hello"); }
     EOS
-    assert_match(/implicitly declaring library function \'printf\' with type/, shell_output("clang-tidy #{testpath}/test.c 2>&1"))
-    assert_match Regexp.new("#{version}".gsub(".", "\\.")), shell_output("clang-tidy --version")
+    assert_match(/implicitly declaring library function 'printf' with type/,
+shell_output("clang-tidy #{testpath}/test.c 2>&1"))
+    assert_match Regexp.new(version.to_s.gsub(".", "\\.")), shell_output("clang-tidy --version")
   end
 end
