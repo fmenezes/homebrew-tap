@@ -6,7 +6,7 @@
 
 Or `brew tap fmenezes/tap` and then `brew install <formula>`.
 
-## Available formulas
+## Available formulae
 - [clang-tidy](https://clang.llvm.org/extra/clang-tidy)
 
 ## Documentation
