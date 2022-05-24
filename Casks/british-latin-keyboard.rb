@@ -9,8 +9,4 @@ cask "british-latin-keyboard" do
 
   pkg "British.Latin.pkg"
 
-  uninstall pkgutil:   [
-    "British.Latin.pkg"
-  ]
-
 end
