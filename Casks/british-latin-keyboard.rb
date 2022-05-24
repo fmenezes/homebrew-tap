@@ -8,4 +8,8 @@ cask "british-latin-keyboard" do
   homepage "https://github.com/fmenezes/british-macos-custom-keyboard-layout"
 
   pkg "British.Latin.pkg"
+
+  uninstall pkgutil: [
+    "org.sil.ukelele.keyboardlayout.british(latin)"
+  ]
 end
