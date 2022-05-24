@@ -4,9 +4,8 @@ cask "british-latin-keyboard" do
 
   url "https://github.com/fmenezes/british-macos-custom-keyboard-layout/releases/download/#{version}/British.Latin.pkg"
   name "british_latin_keyboard"
-  desc "This is a custom keyboard layout to allow typing Latin chars in the British keyboard for Macbook. Also compatible with Apple external keyboard in British English keyboard layout."
+  desc "This is a custom en-gb keyboard layout to allow typing Latin chars"
   homepage "https://github.com/fmenezes/british-macos-custom-keyboard-layout"
 
   pkg "British.Latin.pkg"
-
 end
