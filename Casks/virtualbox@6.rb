@@ -1,4 +1,4 @@
-cask "virtualbox@6" do
+cask "virtualbox-at-6" do
   version "6.1.38,153438"
   sha256 "94743df6a01cc78cc9b4bcdfd06f5dd1b3e66cf06ee3b44b35488381fcca6c98"
 

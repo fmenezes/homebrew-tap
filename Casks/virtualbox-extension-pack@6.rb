@@ -1,4 +1,4 @@
-cask "virtualbox-extension-pack@6" do
+cask "virtualbox-extension-pack-at-6" do
   version "6.1.38"
   sha256 "052f26cf8c619b1aa0cad94c05ece0c1ae326248b4746c95e1deb0729ae4417a"
 
