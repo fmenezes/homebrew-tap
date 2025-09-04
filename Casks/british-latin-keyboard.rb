@@ -9,7 +9,5 @@ cask "british-latin-keyboard" do
 
   pkg "British.Latin.pkg"
 
-  uninstall pkgutil: [
-    "org.sil.ukelele.keyboardlayout.british(latin)",
-  ]
+  uninstall pkgutil: "org.sil.ukelele.keyboardlayout.british(latin)"
 end
