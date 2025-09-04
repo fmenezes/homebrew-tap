@@ -3,12 +3,12 @@ class WineATCx < Formula
   homepage "https://www.codeweavers.com/crossover"
   url "https://media.codeweavers.com/pub/crossover/source/crossover-sources-25.1.0.tar.gz"
   version "25.1.0"
-  sha256 "" # You'll need to calculate this - see instructions below
+  sha256 "85458dca285ff29eed9134c0d091a84648208ac2609eeb3baa9c71acd5af106b"
 
-  depends_on "pkg-config" => :build
   depends_on "bison" => :build
   depends_on "flex" => :build
   depends_on "mingw-w64" => :build
+  depends_on "pkg-config" => :build
   depends_on "freetype"
   depends_on "gettext"
   depends_on "gnutls"
@@ -17,8 +17,8 @@ class WineATCx < Formula
   depends_on "libunwind"
   depends_on "little-cms2"
   depends_on "molten-vk"
-  depends_on "sdl2"
   depends_on "vulkan-headers" => :build
+  depends_on "sdl2"
 
   on_macos do
     depends_on "pcre2"
@@ -32,8 +32,8 @@ class WineATCx < Formula
        *   distversion.c
        *
        * Copyright 2013, CodeWeavers, Inc.
-       * 
-       * Information from DISTVERSION which needs to find 
+       *
+       * Information from DISTVERSION which needs to find
        * its way into the wine tree.
        * --------------------------------------------------------------- */
 
@@ -41,7 +41,7 @@ class WineATCx < Formula
 
       #define WINDEBUG_USER_SUGGESTION_MESSAGE "Check the log for any missing native dependencies and install using winetricks"
     EOF
-    
+
     (buildpath/"sources/wine/programs/winedbg/distversion.h").write(distversion_content)
 
     # Change to wine directory and configure/build
@@ -50,13 +50,6 @@ class WineATCx < Formula
       system "make"
       system "make", "install"
     end
-  end
-
-  test do
-    # Basic test to ensure wine binary was installed
-    assert_predicate bin/"wine64", :exist?
-    # Test wine version output
-    system "#{bin}/wine64", "--version"
   end
 
   def caveats
@@ -74,5 +67,12 @@ class WineATCx < Formula
         brew tap fmenezes/tap
         brew install fmenezes/tap/wine@cx
     EOS
+  end
+
+  test do
+    # Basic test to ensure wine binary was installed
+    assert_path_exists bin/"wine64"
+    # Test wine version output
+    system "#{bin}/wine64", "--version"
   end
 end
