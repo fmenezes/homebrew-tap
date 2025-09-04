@@ -9,6 +9,7 @@ class WineATCx < Formula
   depends_on "flex" => :build
   depends_on "mingw-w64" => :build
   depends_on "pkg-config" => :build
+  depends_on "vulkan-headers" => :build
   depends_on "freetype"
   depends_on "gettext"
   depends_on "gnutls"
@@ -17,7 +18,6 @@ class WineATCx < Formula
   depends_on "libunwind"
   depends_on "little-cms2"
   depends_on "molten-vk"
-  depends_on "vulkan-headers" => :build
   depends_on "sdl2"
 
   on_macos do
