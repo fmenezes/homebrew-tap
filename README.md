@@ -6,9 +6,6 @@
 
 Or `brew tap fmenezes/tap` and then `brew install <formula|cask>`.
 
-## Available formulae
-- [clang-tidy](https://clang.llvm.org/extra/clang-tidy)
-
 ## Available casks
 - [british-latin-keyboard](https://github.com/fmenezes/british-macos-custom-keyboard-layout)
 
