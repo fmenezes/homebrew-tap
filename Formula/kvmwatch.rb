@@ -7,7 +7,7 @@ class Kvmwatch < Formula
   head "https://github.com/fmenezes/kvmwatch.git", branch: "main"
 
   depends_on xcode: :build
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   def install
     system "swift", "build", "-c", "release", "--disable-sandbox"
