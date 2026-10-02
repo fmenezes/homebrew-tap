@@ -7,6 +7,8 @@ cask "british-latin-keyboard" do
   desc "This is a custom en-gb keyboard layout to allow typing Latin chars"
   homepage "https://github.com/fmenezes/british-macos-custom-keyboard-layout"
 
+  depends_on :macos
+
   pkg "British.Latin.pkg"
 
   uninstall pkgutil: "org.sil.ukelele.keyboardlayout.british(latin)"
