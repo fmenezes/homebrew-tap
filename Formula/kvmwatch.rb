@@ -1,8 +1,8 @@
 class Kvmwatch < Formula
   desc "Keep a single-display layout sane when a KVM switches a monitor away"
   homepage "https://github.com/fmenezes/kvmwatch"
-  url "https://github.com/fmenezes/kvmwatch/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "9b2adc4806ab3d9e13a53e0df8a00d64a52b899c6bc2669f6b3545d09f4df8f0"
+  url "https://github.com/fmenezes/kvmwatch/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "0e62748dacd6ef96bf14f128de078794d732026a016d7f36128e93395839be8c"
   license "MIT"
   head "https://github.com/fmenezes/kvmwatch.git", branch: "main"
 
