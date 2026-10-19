@@ -5,6 +5,12 @@ class Mbuild < Formula
   sha256 "1e4c9202488904e6fe4aca888daa937c69daf27cca55bc7a18d5a233309c6667"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/fmenezes/homebrew-tap/releases/download/mbuild-2026.08.23"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "152c4c4d0bd093072a77ee2697c0af17363f1190d560148e02fa4fd35edc5ba3"
+  end
+
   depends_on :macos
   depends_on "python@3.11"
 
