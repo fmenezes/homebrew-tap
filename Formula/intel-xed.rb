@@ -6,6 +6,11 @@ class IntelXed < Formula
   license "Apache-2.0"
   head "https://github.com/intelxed/xed.git", branch: "main"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     root_url "https://github.com/fmenezes/homebrew-tap/releases/download/intel-xed-2026.08.23"
     sha256 cellar: :any_skip_relocation, arm64_tahoe: "db1dda87cce7f8fbe08d3c608dd7fe6f813df8a0b9b7d6cc1a4f36cb0e82c3bd"
