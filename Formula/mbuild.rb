@@ -5,6 +5,11 @@ class Mbuild < Formula
   sha256 "1e4c9202488904e6fe4aca888daa937c69daf27cca55bc7a18d5a233309c6667"
   license "Apache-2.0"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     root_url "https://github.com/fmenezes/homebrew-tap/releases/download/mbuild-2026.08.23"
     rebuild 1
