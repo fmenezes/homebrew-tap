@@ -9,6 +9,7 @@ Or `brew tap fmenezes/tap` and then `brew install <formula|cask>`.
 ## Available formulae
 - [kvmwatch](https://github.com/fmenezes/kvmwatch)
 - [mbuild](https://github.com/intelxed/mbuild)
+- [Intel XED](https://github.com/intelxed/xed)
 
 ## Available casks
 - [british-latin-keyboard](https://github.com/fmenezes/british-macos-custom-keyboard-layout)

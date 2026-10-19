@@ -5,8 +5,8 @@ class Mbuild < Formula
   sha256 "1e4c9202488904e6fe4aca888daa937c69daf27cca55bc7a18d5a233309c6667"
   license "Apache-2.0"
 
-  depends_on "python@3.11" => :build
   depends_on :macos
+  depends_on "python@3.11"
 
   def install
     # Install mbuild to libexec for proper Python module support
