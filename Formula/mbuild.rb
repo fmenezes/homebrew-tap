@@ -5,6 +5,7 @@ class Mbuild < Formula
   sha256 "0187d2132b82168e874144111510751764197620400250112507500024111401"
   license "Apache-2.0"
 
+  depends_on :macos 
   depends_on "python@3.11" => :build
 
   def install
