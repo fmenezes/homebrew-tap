@@ -12,8 +12,8 @@ class Mbuild < Formula
 
   bottle do
     root_url "https://github.com/fmenezes/homebrew-tap/releases/download/mbuild-2026.08.23"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "152c4c4d0bd093072a77ee2697c0af17363f1190d560148e02fa4fd35edc5ba3"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "7f142a65217dbc60f7737429a80861de058abd503888b5ace3aa2b3c3e58000d"
   end
 
   depends_on :macos
