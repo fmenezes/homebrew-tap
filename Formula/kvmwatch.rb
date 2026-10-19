@@ -6,6 +6,11 @@ class Kvmwatch < Formula
   license "MIT"
   head "https://github.com/fmenezes/kvmwatch.git", branch: "main"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   depends_on xcode: :build
   depends_on macos: :ventura
 
