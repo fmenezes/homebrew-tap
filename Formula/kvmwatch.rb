@@ -11,6 +11,12 @@ class Kvmwatch < Formula
     strategy :github_latest
   end
 
+  bottle do
+    root_url "https://github.com/fmenezes/homebrew-tap/releases/download/kvmwatch-0.3.0"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "8cf4f190cdb8bd41065d5985dacccc00a557f361a5f86ddd4e263d092063e363"
+  end
+
   depends_on xcode: :build
   depends_on macos: :ventura
 
