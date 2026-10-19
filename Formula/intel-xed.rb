@@ -13,7 +13,8 @@ class IntelXed < Formula
 
   bottle do
     root_url "https://github.com/fmenezes/homebrew-tap/releases/download/intel-xed-2026.08.23"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "db1dda87cce7f8fbe08d3c608dd7fe6f813df8a0b9b7d6cc1a4f36cb0e82c3bd"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "cfaf21c446108f47b6ebcd9a4eaa283d4c135d7dfef06dfb8bf38b8b9ff80297"
   end
 
   depends_on "llvm" => :build
