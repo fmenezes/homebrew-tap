@@ -6,7 +6,6 @@ class Mbuild < Formula
   license "Apache-2.0"
 
   depends_on "python@3.11" => :build
-  depends_on :macos
 
   def install
     # Install mbuild to libexec for proper Python module support
