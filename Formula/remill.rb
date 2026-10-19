@@ -13,6 +13,7 @@ class Remill < Formula
   depends_on "ninja" => :build
   depends_on "python@3.14" => :build
   depends_on "llvm@17"
+  depends_on :macos
 
   def install
     llvm = formula_opt_prefix("llvm@17")
