@@ -9,7 +9,8 @@ class Remill < Formula
 
   bottle do
     root_url "https://github.com/fmenezes/homebrew-tap/releases/download/remill-6.0.1"
-    sha256 arm64_tahoe: "0b9584cd90f7bb891bb059e805813edcf8f8878b75acfb75a541ad5fb8862567"
+    rebuild 1
+    sha256 arm64_tahoe: "3a4d751ea69701f96e2c5eb9a07a25aa3af024adb05ae0fd476c3f269d03eed7"
   end
 
   depends_on "cmake" => :build
