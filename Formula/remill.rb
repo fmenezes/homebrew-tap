@@ -1,5 +1,3 @@
-require "macho"
-
 class Remill < Formula
   desc "Library for lifting machine code to LLVM bitcode"
   homepage "https://github.com/lifting-bits/remill"
@@ -42,13 +40,10 @@ class Remill < Formula
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
-    # The bundled clang/llvm-link wrappers resolve LLVM dylibs via @rpath, so
-    # point them at the llvm@17 keg. Patching invalidates their ad-hoc code
-    # signature, so re-sign them (macOS kills unsigned/modified binaries).
-    %w[remill-clang-17 remill-llvm-link-17].each do |name|
-      MachO::Tools.add_rpath((bin/name).to_s, formula_opt_lib("llvm@17").to_s)
-      system "codesign", "--force", "--sign", "-", bin/name
-    end
+    # The bundled clang/llvm-link wrappers resolve LLVM dylibs via
+    # @loader_path/../lib; link the llvm@17 dylibs they expect into our lib.
+    ln_s formula_opt_lib("llvm@17")/"libclang-cpp.dylib", lib
+    ln_s formula_opt_lib("llvm@17")/"libLLVM.dylib", lib
   end
 
   test do
